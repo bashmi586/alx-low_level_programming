@@ -1,14 +1,48 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * add - adds two numbers
- * @a: para 1
- * @b: para 2
- * Return: sum
+ * print_to_98 - function to print natural numbers
+ *
+ * @n: function parameter
+ *
+ * Return: Always 0
  */
 
-
-int add(int a, int b)
+void print_to_98(int n)
 {
-	return (a + b);
+	int i;
+
+	if (n >= 0 && n <= 98)
+	{
+		for (i = n ; i <= 98 ; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+		printf("\n");
+	}
+	else if (n < 0)
+	{
+		for (i = n ; i <= 98 ; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+		printf("\n");
+	}
+	else if (n > 98)
+	{
+		for (i = n ; i >= 98 ; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+		printf("\n");
+	}
+	else if (n == 98)
+		printf("%d, ", n);
 }
